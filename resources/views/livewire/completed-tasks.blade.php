@@ -1,6 +1,3 @@
-<div>
-    {{-- Nothing in the world is as soft and yielding as water. --}}
-</div>
 <div class="card tasks-card">
     <div class="card-body justify-content-center">
         <h2>Completed Tasks</h2>

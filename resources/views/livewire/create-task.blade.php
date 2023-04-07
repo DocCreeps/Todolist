@@ -1,5 +1,5 @@
 <div class="max-w-sm rounded overflow-hidden shadow-lg">
-    <div class="card-body">
+    <div class="card-body bg-white text-center">
         <h1 class="text-xl font-bold">Create Task</h1>
 
         @error('description') <span class="text-red-500">- {{ $message }}</span> @enderror
