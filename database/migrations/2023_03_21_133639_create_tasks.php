@@ -19,6 +19,7 @@ return new class extends Migration
             $table->boolean('state')->default(false);
             $table->timestamp('completed_at')->nullable();
             $table->boolean('editing')->default(false);
+           // $table->foreignId('user_id')->references('id')->on('users');
         });
     }
 
