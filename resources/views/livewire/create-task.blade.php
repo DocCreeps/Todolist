@@ -1,7 +1,3 @@
-<div class="card task-card">
-
-</div>
-
 <div class="max-w-sm rounded overflow-hidden shadow-lg">
     <div class="card-body">
         <h1 class="text-xl font-bold">Create Task</h1>
@@ -18,4 +14,3 @@
         </form>
     </div>
 </div>
-

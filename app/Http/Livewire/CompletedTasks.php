@@ -39,7 +39,7 @@ class CompletedTasks extends Component
 
         foreach ($tasks as $key => $task) {
             $date = Carbon::parse($task->completed_at);
-            $task->completed_at = $date->format('m/d/Y g:i A');
+            $task->completed_at = $date->format('d/m/Y H:i');
         }
 
         $this->tasks = $tasks;
