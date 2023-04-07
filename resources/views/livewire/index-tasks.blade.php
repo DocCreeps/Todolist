@@ -1,4 +1,4 @@
-<div class="md:w-1/3 w-full rounded-md bg-white shadow-md p-4 mb-4 md:mb-0">
+<div class="w-full rounded-md bg-white shadow-md p-4 mb-4 md:mb-0">
     <div class="flex justify-center">
         <h2 class="text-lg font-bold">Tasks</h2>
     </div>
@@ -11,6 +11,18 @@
                 <li @click="open = true" class="task flex items-center py-2">
                     <span class="task-number text-gray-600 text-lg font-semibold mr-2">{{ $task->title }}</span>
                     <span class="text-gray-500">{{ $task->detail }}</span>
+                    <div
+                        class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-blue-200 text-blue-700 rounded-full"
+                    >
+                        <span class="task-start-date">Start : {{ $task->created_at }}</span>
+                    </div>
+                    @if($task->updated_at !== $task->created_at)
+                        <div
+                            class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-orange-200 text-orange-700 rounded-full"
+                        >
+                            <span class="task-update-date"> Update : {{$task->updated_at }}</span>
+                        </div>
+                    @endif
                 </li>
 
                 <ul x-show.transition.in.duration.150ms="open" @click.away="open = false" x-cloak>
